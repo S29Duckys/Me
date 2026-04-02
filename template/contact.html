@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — siteX</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="antigravity-canvas"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">site<span>X</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="skills.html">Expertise</a></li>
+    <li><a href="projects.html">Réalisations</a></li>
+    <li><a href="services.html">Services & Tarifs</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Devis gratuit</a>
+  <button class="nav-menu-btn">&#9776;</button>
+</nav>
+
+<div class="mobile-menu">
+  <button class="mobile-menu-close">&times;</button>
+  <a href="index.html">Accueil</a>
+  <a href="about.html">À propos</a>
+  <a href="skills.html">Expertise</a>
+  <a href="projects.html">Réalisations</a>
+  <a href="services.html">Services & Tarifs</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main class="page-content">
+  <div class="contact-container">
+    <div class="section-label reveal" style="justify-content:center">05 — Contact</div>
+    <h2 class="contact-title reveal reveal-delay-1">Lançons votre <span>projet</span></h2>
+    <p class="contact-sub reveal reveal-delay-2">Décrivez-nous votre projet et recevez un devis gratuit et détaillé sous 24h. Sans engagement.</p>
+    <form class="contact-form reveal reveal-delay-3" onsubmit="event.preventDefault()">
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <input type="text" placeholder="Nom de votre entreprise" class="full-width" />
+      <textarea placeholder="Décrivez votre projet : type de site, fonctionnalités souhaitées, budget estimé..." class="full-width"></textarea>
+      <button type="submit" class="btn-primary full-width">Demander un devis gratuit</button>
+    </form>
+    <div class="contact-socials reveal reveal-delay-4">
+      <a href="#" class="social-link" title="LinkedIn">IN</a>
+      <a href="#" class="social-link" title="Instagram">IG</a>
+      <a href="mailto:contact@sitex.fr" class="social-link" title="Email">@</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 siteX — Tous droits réservés</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
