@@ -12,47 +12,340 @@
 <canvas id="antigravity-canvas"></canvas>
 
 <nav>
-  <a href="index.html" class="nav-logo">site<span>X</span></a>
+  <a href="#hero" class="nav-logo">site<span>X</span></a>
   <ul class="nav-links">
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="skills.html">Expertise</a></li>
-    <li><a href="projects.html">Réalisations</a></li>
-    <li><a href="services.html">Services & Tarifs</a></li>
+    <li><a href="#about" data-section="about">À propos</a></li>
+    <li><a href="#skills" data-section="skills">Expertise</a></li>
+    <li><a href="#projects" data-section="projects">Réalisations</a></li>
+    <li><a href="#services" data-section="services">Services & Tarifs</a></li>
   </ul>
-  <a href="contact.html" class="nav-cta">Devis gratuit</a>
+  <a href="#contact" class="nav-cta" data-section="contact">Devis gratuit</a>
   <button class="nav-menu-btn">&#9776;</button>
 </nav>
 
 <div class="mobile-menu">
   <button class="mobile-menu-close">&times;</button>
-  <a href="index.html">Accueil</a>
-  <a href="about.html">À propos</a>
-  <a href="skills.html">Expertise</a>
-  <a href="projects.html">Réalisations</a>
-  <a href="services.html">Services & Tarifs</a>
-  <a href="contact.html">Contact</a>
+  <a href="#hero" data-section="hero">Accueil</a>
+  <a href="#about" data-section="about">À propos</a>
+  <a href="#skills" data-section="skills">Expertise</a>
+  <a href="#projects" data-section="projects">Réalisations</a>
+  <a href="#services" data-section="services">Services & Tarifs</a>
+  <a href="#contact" data-section="contact">Contact</a>
 </div>
 
-<section class="hero">
-  <div class="hero-badge reveal">
-    <span class="dot"></span>
-    Nouveaux créneaux disponibles
-  </div>
-  <h1 class="reveal reveal-delay-1">Votre site web<br/><em>clé en main</em></h1>
-  <p class="hero-sub reveal reveal-delay-2">Nous concevons des sites web sur-mesure, performants et esthétiques qui transforment vos visiteurs en clients.</p>
-  <div class="hero-actions reveal reveal-delay-3">
-    <a href="projects.html" class="btn-primary">Nos réalisations</a>
-    <a href="contact.html" class="btn-outline">Demander un devis</a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
-  </div>
-</section>
+<!-- Page indicator dots -->
+<div class="page-dots">
+  <button class="page-dot active" data-section="hero" title="Accueil"></button>
+  <button class="page-dot" data-section="about" title="À propos"></button>
+  <button class="page-dot" data-section="skills" title="Expertise"></button>
+  <button class="page-dot" data-section="projects" title="Réalisations"></button>
+  <button class="page-dot" data-section="services" title="Services"></button>
+  <button class="page-dot" data-section="contact" title="Contact"></button>
+</div>
 
-<footer>
-  <p>&copy; 2026 siteX — Tous droits réservés</p>
-</footer>
+<main class="fullpage-wrapper">
+
+  <!-- HERO -->
+  <section class="fp-section" id="hero">
+    <div class="fp-section-inner">
+      <div class="hero-badge fp-reveal">
+        <span class="dot"></span>
+        Nouveaux créneaux disponibles
+      </div>
+      <h1 class="fp-reveal fp-reveal-delay-1">Votre site web<br/><em>clé en main</em></h1>
+      <p class="hero-sub fp-reveal fp-reveal-delay-2">Nous concevons des sites web sur-mesure, performants et esthétiques qui transforment vos visiteurs en clients.</p>
+      <div class="hero-actions fp-reveal fp-reveal-delay-3">
+        <a href="#projects" class="btn-primary" data-section="projects">Nos réalisations</a>
+        <a href="#contact" class="btn-outline" data-section="contact">Demander un devis</a>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        Scroll
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="fp-section" id="about">
+    <div class="fp-section-inner fp-section-padded">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label fp-reveal">01 — À propos</div>
+          <h2 class="section-title fp-reveal fp-reveal-delay-1">Une agence <em>à taille humaine</em></h2>
+          <p class="fp-reveal fp-reveal-delay-2"><strong>siteX</strong> est une agence web spécialisée dans la création de sites internet sur-mesure. <strong>Notre mission : donner à chaque entreprise une présence en ligne à la hauteur de ses ambitions.</strong></p>
+          <p class="fp-reveal fp-reveal-delay-3">Du site vitrine au e-commerce en passant par les applications web complexes, nous maîtrisons l'ensemble de la chaîne de production. Notre approche allie design moderne, performances techniques et accompagnement personnalisé pour garantir votre satisfaction.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card antigravity-target fp-reveal fp-reveal-delay-1">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Sites livrés</div>
+          </div>
+          <div class="stat-card antigravity-target fp-reveal fp-reveal-delay-2">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Technologies maîtrisées</div>
+          </div>
+          <div class="stat-card antigravity-target fp-reveal fp-reveal-delay-3">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Clients satisfaits</div>
+          </div>
+          <div class="stat-card antigravity-target fp-reveal fp-reveal-delay-4">
+            <div class="stat-number">24h</div>
+            <div class="stat-label">Temps de réponse</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="fp-section" id="skills">
+    <div class="fp-section-inner fp-section-padded">
+      <div class="skills-container">
+        <div class="section-label fp-reveal">02 — Expertise</div>
+        <h2 class="section-title fp-reveal fp-reveal-delay-1">Notre stack <em>technique</em></h2>
+        <div class="skills-grid">
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-1">
+            <span class="skill-dot" style="background:#f7df1e"></span>
+            JavaScript
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-1">
+            <span class="skill-dot" style="background:#e44d26"></span>
+            HTML5
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-2">
+            <span class="skill-dot" style="background:#264de4"></span>
+            CSS3
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-2">
+            <span class="skill-dot" style="background:#777bb4"></span>
+            PHP
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-3">
+            <span class="skill-dot" style="background:#3776ab"></span>
+            Python
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-3">
+            <span class="skill-dot" style="background:#e82d2e"></span>
+            Java
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-4">
+            <span class="skill-dot" style="background:#336791"></span>
+            SQL
+          </div>
+          <div class="skill-tag antigravity-target fp-reveal fp-reveal-delay-4">
+            <span class="skill-dot" style="background:#00add8"></span>
+            Go
+          </div>
+        </div>
+        <div class="skills-note fp-reveal fp-reveal-delay-5">
+          <span>&#9733;</span> Des technologies adaptées à chaque projet pour des résultats optimaux
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="fp-section" id="projects">
+    <div class="fp-section-inner fp-section-padded">
+      <div class="projects-container">
+        <div class="section-label fp-reveal">03 — Réalisations</div>
+        <h2 class="section-title fp-reveal fp-reveal-delay-1">Nos projets <em>récents</em></h2>
+        <div class="projects-grid">
+          <div class="project-card antigravity-target fp-reveal fp-reveal-delay-1">
+            <div class="project-preview">
+              <div class="project-preview-gradient" style="background:linear-gradient(135deg, #a855f722, #ff6b9d22)"></div>
+              <div class="project-preview-inner">01</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag-item">HTML</span>
+                <span class="project-tag-item">CSS</span>
+                <span class="project-tag-item">JS</span>
+                <span class="project-tag-item">PHP</span>
+                <span class="project-tag-item">SQL</span>
+              </div>
+              <h3>Plateforme de Streaming d'Animés</h3>
+              <p>Site de streaming d'animés complet avec système d'abonnement, lecteur vidéo intégré, catalogue par genres, gestion de favoris et historique de visionnage.</p>
+              <a href="#" class="project-link">Voir le projet &rarr;</a>
+            </div>
+          </div>
+          <div class="project-card antigravity-target fp-reveal fp-reveal-delay-2">
+            <div class="project-preview">
+              <div class="project-preview-gradient" style="background:linear-gradient(135deg, #5865f222, #57f28722)"></div>
+              <div class="project-preview-inner">02</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag-item">Python</span>
+                <span class="project-tag-item">Discord API</span>
+              </div>
+              <h3>Bots Discord</h3>
+              <p>Développement de bots Discord sur-mesure : modération automatique, système de tickets, musique, commandes personnalisées et intégration d'APIs externes.</p>
+              <a href="#" class="project-link">Voir le projet &rarr;</a>
+            </div>
+          </div>
+          <div class="project-card antigravity-target fp-reveal fp-reveal-delay-3">
+            <div class="project-preview">
+              <div class="project-preview-gradient" style="background:linear-gradient(135deg, #e82d2e22, #facc1522)"></div>
+              <div class="project-preview-inner">03</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag-item">Java</span>
+                <span class="project-tag-item">SQL</span>
+              </div>
+              <h3>Application Bancaire</h3>
+              <p>Application bancaire complète en Java avec gestion de comptes, virements, historique de transactions, authentification sécurisée et tableau de bord client.</p>
+              <a href="#" class="project-link">Voir le projet &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="fp-section fp-section-scrollable" id="services">
+    <div class="fp-section-inner fp-section-padded">
+      <div class="services-container">
+        <div class="section-label fp-reveal">04 — Services</div>
+        <h2 class="section-title fp-reveal fp-reveal-delay-1">Ce que nous faisons <em>pour vous</em></h2>
+        <div class="services-grid">
+          <div class="service-card antigravity-target fp-reveal fp-reveal-delay-1">
+            <div class="service-icon">&#9998;</div>
+            <h3>Site Vitrine</h3>
+            <p>Un site élégant qui présente votre activité et attire de nouveaux clients. Design sur-mesure et responsive.</p>
+          </div>
+          <div class="service-card antigravity-target fp-reveal fp-reveal-delay-2">
+            <div class="service-icon">&#128722;</div>
+            <h3>E-Commerce</h3>
+            <p>Votre boutique en ligne complète avec gestion des produits, paiement sécurisé et tableau de bord.</p>
+          </div>
+          <div class="service-card antigravity-target fp-reveal fp-reveal-delay-3">
+            <div class="service-icon">&#9881;</div>
+            <h3>Application Web</h3>
+            <p>Des applications web performantes et interactives adaptées à vos besoins métier spécifiques.</p>
+          </div>
+          <div class="service-card antigravity-target fp-reveal fp-reveal-delay-4">
+            <div class="service-icon">&#10227;</div>
+            <h3>Refonte de Site</h3>
+            <p>Modernisation de votre site existant pour le rendre plus performant, rapide et attractif.</p>
+          </div>
+        </div>
+
+        <!-- TARIFS -->
+        <div class="pricing-section">
+          <div class="section-label fp-reveal">Tarifs</div>
+          <h2 class="section-title fp-reveal fp-reveal-delay-1">Des tarifs <em>transparents</em></h2>
+          <div class="pricing-grid">
+            <div class="pricing-card antigravity-target fp-reveal fp-reveal-delay-1">
+              <div class="pricing-header">
+                <h3>Essentiel</h3>
+                <p class="pricing-desc">Site vitrine & landing page</p>
+                <div class="pricing-rate">
+                  <span class="amount">35</span>
+                  <span class="unit">€ / heure</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li>Design responsive sur-mesure</li>
+                <li>Jusqu'à 5 pages</li>
+                <li>Intégration HTML / CSS / JS</li>
+                <li>Formulaire de contact</li>
+                <li>Optimisation SEO de base</li>
+                <li>Mise en ligne incluse</li>
+              </ul>
+              <div class="pricing-estimate">
+                <div class="label">Estimation projet type</div>
+                <div class="value">15-25h &mdash; 525€ à 875€</div>
+              </div>
+              <a href="#contact" class="pricing-cta outline" data-section="contact">Demander un devis</a>
+            </div>
+            <div class="pricing-card featured antigravity-target fp-reveal fp-reveal-delay-2">
+              <div class="pricing-badge">Populaire</div>
+              <div class="pricing-header">
+                <h3>Professionnel</h3>
+                <p class="pricing-desc">E-commerce & sites avancés</p>
+                <div class="pricing-rate">
+                  <span class="amount">50</span>
+                  <span class="unit">€ / heure</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li>Tout de l'offre Essentiel</li>
+                <li>Back-end PHP / Python / Java</li>
+                <li>Base de données SQL</li>
+                <li>Système de paiement sécurisé</li>
+                <li>Espace administration sur-mesure</li>
+                <li>Tests & déploiement complet</li>
+                <li>30 jours de support inclus</li>
+              </ul>
+              <div class="pricing-estimate">
+                <div class="label">Estimation projet type</div>
+                <div class="value">40-80h &mdash; 2 000€ à 4 000€</div>
+              </div>
+              <a href="#contact" class="pricing-cta primary" data-section="contact">Demander un devis</a>
+            </div>
+            <div class="pricing-card antigravity-target fp-reveal fp-reveal-delay-3">
+              <div class="pricing-header">
+                <h3>Sur-Mesure</h3>
+                <p class="pricing-desc">Application web & API complexe</p>
+                <div class="pricing-rate">
+                  <span class="amount">65</span>
+                  <span class="unit">€ / heure</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li>Tout de l'offre Professionnel</li>
+                <li>Architecture API RESTful (Go / Java)</li>
+                <li>Authentification & gestion des rôles</li>
+                <li>Fonctionnalités temps réel</li>
+                <li>Intégrations tierces (API, webhooks)</li>
+                <li>Optimisation performances</li>
+                <li>60 jours de support inclus</li>
+              </ul>
+              <div class="pricing-estimate">
+                <div class="label">Estimation projet type</div>
+                <div class="value">80-150h &mdash; 5 200€ à 9 750€</div>
+              </div>
+              <a href="#contact" class="pricing-cta outline" data-section="contact">Demander un devis</a>
+            </div>
+          </div>
+          <p class="pricing-note fp-reveal fp-reveal-delay-4">
+            <strong>Chaque projet est unique.</strong> Ces tarifs sont indicatifs. Nous vous proposons toujours un devis détaillé et gratuit après avoir discuté de vos besoins. Paiement en plusieurs fois possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="fp-section" id="contact">
+    <div class="fp-section-inner fp-section-padded">
+      <div class="contact-container">
+        <div class="section-label fp-reveal" style="justify-content:center">05 — Contact</div>
+        <h2 class="contact-title fp-reveal fp-reveal-delay-1">Lançons votre <span>projet</span></h2>
+        <p class="contact-sub fp-reveal fp-reveal-delay-2">Décrivez-nous votre projet et recevez un devis gratuit et détaillé sous 24h. Sans engagement.</p>
+        <form class="contact-form fp-reveal fp-reveal-delay-3" onsubmit="event.preventDefault()">
+          <input type="text" placeholder="Votre nom" required />
+          <input type="email" placeholder="Votre email" required />
+          <input type="text" placeholder="Nom de votre entreprise" class="full-width" />
+          <textarea placeholder="Décrivez votre projet : type de site, fonctionnalités souhaitées, budget estimé..." class="full-width"></textarea>
+          <button type="submit" class="btn-primary full-width">Demander un devis gratuit</button>
+        </form>
+        <div class="contact-socials fp-reveal fp-reveal-delay-4">
+          <a href="#" class="social-link" title="LinkedIn">IN</a>
+          <a href="#" class="social-link" title="Instagram">IG</a>
+          <a href="mailto:contact@sitex.fr" class="social-link" title="Email">@</a>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2026 siteX — Tous droits réservés</p>
+      </footer>
+    </div>
+  </section>
+
+</main>
 
 <script src="js/main.js"></script>
 </body>

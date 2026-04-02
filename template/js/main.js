@@ -10,7 +10,7 @@
 
   function resize() {
     W = canvas.width = window.innerWidth;
-    H = canvas.height = document.documentElement.scrollHeight;
+    H = canvas.height = window.innerHeight;
   }
 
   class Particle {
@@ -29,11 +29,8 @@
       this.isAccent = Math.random() < 0.15;
     }
     update() {
-      const scrollY = window.scrollY;
-      const mx = mouseX;
-      const my = mouseY + scrollY;
-      const dx = this.x - mx;
-      const dy = this.y - my;
+      const dx = this.x - mouseX;
+      const dy = this.y - mouseY;
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < REPEL_RADIUS && dist > 0) {
@@ -50,11 +47,8 @@
       this.y += this.vy;
     }
     draw() {
-      const scrollY = window.scrollY;
-      const screenY = this.y - scrollY;
-      if (screenY < -50 || screenY > H + 50) return;
       ctx.beginPath();
-      ctx.arc(this.x, screenY, this.size, 0, Math.PI * 2);
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       if (this.isAccent) {
         ctx.fillStyle = `rgba(200, 255, 0, ${this.alpha * 2})`;
       } else {
@@ -91,20 +85,8 @@
 
   window.addEventListener('resize', () => { initParticles(); });
 
-  let lastScrollHeight = 0;
-  function checkHeight() {
-    const sh = document.documentElement.scrollHeight;
-    if (sh !== lastScrollHeight) {
-      lastScrollHeight = sh;
-      canvas.height = sh;
-      H = sh;
-    }
-    requestAnimationFrame(checkHeight);
-  }
-
   initParticles();
   animate();
-  checkHeight();
 })();
 
 // ─── ANTIGRAVITY EFFECT ON DOM ELEMENTS ───
@@ -154,19 +136,106 @@
   tick();
 })();
 
-// ─── SCROLL REVEAL ───
+// ─── FULLPAGE SCROLL REVEAL & NAVIGATION ───
 (() => {
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+  const wrapper = document.querySelector('.fullpage-wrapper');
+  const sections = document.querySelectorAll('.fp-section');
+  const dots = document.querySelectorAll('.page-dot');
+  const navLinks = document.querySelectorAll('[data-section]');
+  let currentIndex = 0;
+
+  // Reveal elements in a section
+  function revealSection(section) {
+    section.querySelectorAll('.fp-reveal').forEach(el => {
+      el.classList.remove('fp-leaving');
+      el.classList.add('visible');
+    });
+  }
+
+  // Animate out elements when leaving a section
+  function hideSection(section) {
+    section.querySelectorAll('.fp-reveal').forEach(el => {
+      el.classList.remove('visible');
+      el.classList.add('fp-leaving');
+    });
+    // Clean up leaving class after animation
+    setTimeout(() => {
+      section.querySelectorAll('.fp-reveal').forEach(el => {
+        el.classList.remove('fp-leaving');
+      });
+    }, 700);
+  }
+
+  // Update active dot and nav link
+  function updateIndicators(index) {
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    const activeId = sections[index]?.id;
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-section') === activeId);
+    });
+  }
+
+  // Detect current section on scroll
+  let scrollTimeout;
+  function onScroll() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollTop = wrapper.scrollTop;
+      let newIndex = 0;
+      sections.forEach((s, i) => {
+        if (scrollTop >= s.offsetTop - window.innerHeight / 2) {
+          newIndex = i;
         }
       });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      if (newIndex !== currentIndex) {
+        hideSection(sections[currentIndex]);
+        currentIndex = newIndex;
+        // Delay reveal so exit animation plays first
+        setTimeout(() => {
+          revealSection(sections[currentIndex]);
+        }, 300);
+        updateIndicators(currentIndex);
+      }
+    }, 50);
+  }
+
+  wrapper.addEventListener('scroll', onScroll, { passive: true });
+
+  // Navigate to section
+  function goToSection(id) {
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Dot click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goToSection(dot.getAttribute('data-section'));
+    });
+  });
+
+  // Nav link click
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToSection(link.getAttribute('data-section'));
+      // Close mobile menu if open
+      document.querySelector('.mobile-menu')?.classList.remove('open');
+    });
+  });
+
+  // Logo click
+  document.querySelector('.nav-logo')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    goToSection('hero');
+  });
+
+  // Init: reveal first section
+  revealSection(sections[0]);
+  updateIndicators(0);
 })();
 
 // ─── MOBILE MENU ───
@@ -177,7 +246,4 @@
   if (!btn || !menu) return;
   btn.addEventListener('click', () => menu.classList.add('open'));
   if (close) close.addEventListener('click', () => menu.classList.remove('open'));
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => menu.classList.remove('open'));
-  });
 })();
