@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Web — Sites sur mesure</title>
+    <meta
+      name="description"
+      content="Création de sites web sur mesure pour particuliers et petites entreprises. Landing pages et sites vitrines."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="stars-canvas"></canvas>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <span class="nav-logo">◆ Studio</span>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-burger" id="nav-burger" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="section hero">
+        <div class="container">
+          <p class="hero-eyebrow reveal">Développeur Web Freelance</p>
+          <h1 class="hero-title reveal">
+            Je crée votre<br />
+            <span class="shimmer-text">présence en ligne.</span>
+          </h1>
+          <p class="hero-sub reveal">
+            Sites vitrines et landing pages sur mesure pour les particuliers et
+            petites entreprises. Simple, rapide, efficace.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#services" class="btn btn-primary">Voir mes services</a>
+            <a href="#contact" class="btn btn-ghost">Me contacter →</a>
+          </div>
+          <div class="hero-scroll reveal">
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section">
+        <div class="container">
+          <p class="section-label reveal">Ce que je propose</p>
+          <h2 class="section-title reveal">Mes services</h2>
+          <div class="cards">
+            <div class="card reveal">
+              <div class="card-icon">◎</div>
+              <h3>Landing Page</h3>
+              <p>
+                Une page unique et percutante pour présenter votre offre, capter
+                l'attention et convertir vos visiteurs.
+              </p>
+              <ul class="card-features">
+                <li>Design sur mesure</li>
+                <li>Responsive (mobile / tablette)</li>
+                <li>Optimisé pour la conversion</li>
+                <li>Formulaire de contact</li>
+              </ul>
+            </div>
+            <div class="card card-featured reveal">
+              <div class="card-badge">Populaire</div>
+              <div class="card-icon">◈</div>
+              <h3>Site Vitrine</h3>
+              <p>
+                Un site complet multi-pages pour présenter votre activité, vos
+                services et votre univers de façon professionnelle.
+              </p>
+              <ul class="card-features">
+                <li>Jusqu'à 5 pages</li>
+                <li>Design sur mesure</li>
+                <li>Responsive (mobile / tablette)</li>
+                <li>Formulaire de contact</li>
+                <li>Référencement de base (SEO)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" class="section">
+        <div class="container">
+          <p class="section-label reveal">Comment ça marche</p>
+          <h2 class="section-title reveal">En 3 étapes simples</h2>
+          <div class="steps">
+            <div class="step reveal">
+              <span class="step-num">01</span>
+              <h3>Échange</h3>
+              <p>
+                On discute de votre projet, vos besoins et vos envies. Je vous
+                pose les bonnes questions pour bien cerner ce que vous voulez.
+              </p>
+            </div>
+            <div class="step-sep reveal">—</div>
+            <div class="step reveal">
+              <span class="step-num">02</span>
+              <h3>Création</h3>
+              <p>
+                Je conçois et développe votre site sur mesure. Vous êtes tenu
+                informé à chaque étape et pouvez demander des ajustements.
+              </p>
+            </div>
+            <div class="step-sep reveal">—</div>
+            <div class="step reveal">
+              <span class="step-num">03</span>
+              <h3>Livraison</h3>
+              <p>
+                Votre site est mis en ligne et prêt à l'emploi. Je vous livre
+                les accès et vous accompagne dans la prise en main.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projets -->
+      <section id="projets" class="section">
+        <div class="container">
+          <p class="section-label reveal">Quelques réalisations</p>
+          <h2 class="section-title reveal">Projets récents</h2>
+          <div class="projects">
+            <div class="project-card reveal">
+              <a href="">
+                <img
+                  src="/assets/projet1.jpg"
+                  alt="Capture d'écran du projet 1"
+                  class="project-image"
+                />
+              </a>
+              <h3>Site Vitrine pour Artisan Local</h3>
+              <p>
+                Un site élégant et fonctionnel pour présenter les services d'un
+                artisan et attirer de nouveaux clients.
+              </p>
+            </div>
+            <div class="project-card reveal">
+              <a href="">
+                <img
+                  src="/assets/projet2.jpg"
+                  alt="Capture d'écran du projet 2"
+                  class="project-image"
+                />
+              </a>
+              <h3>Landing Page pour Lancement de Produit</h3>
+              <p>
+                Une page percutante conçue pour maximiser les conversions lors
+                du lancement d'un nouveau produit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tarifs -->
+      <section id="tarifs" class="section">
+        <div class="container">
+          <p class="section-label reveal">Investissement</p>
+          <h2 class="section-title reveal">Tarifs</h2>
+          <div class="pricing">
+            <div class="price-card reveal">
+              <p class="price-label">Landing Page</p>
+              <div class="price">
+                <span class="price-from">à partir de</span>
+                <span class="price-amount">150 €</span>
+              </div>
+              <p class="price-note">
+                Idéal pour un produit, un événement ou une offre spécifique.
+              </p>
+              <a href="#contact" class="btn btn-ghost">Demander un devis</a>
+            </div>
+            <div class="price-card price-card-featured reveal">
+              <p class="price-label">Site Vitrine</p>
+              <div class="price">
+                <span class="price-from">à partir de</span>
+                <span class="price-amount">300 €</span>
+              </div>
+              <p class="price-note">
+                Pour présenter votre activité de manière complète et
+                professionnelle.
+              </p>
+              <a href="#contact" class="btn btn-primary">Demander un devis</a>
+            </div>
+          </div>
+          <p class="pricing-note reveal">
+            Tarif définitif établi après discussion selon le projet. Paiement en
+            plusieurs fois possible.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container container-sm">
+          <p class="section-label reveal">Parlons-en</p>
+          <h2 class="section-title reveal">Démarrons votre projet</h2>
+          <p class="contact-sub reveal">
+            Une idée ? Un projet ? Envoyez-moi un message et je vous réponds
+            sous 24h.
+          </p>
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Nom</label>
+                <input
+                  type="text"
+                  id="f-name"
+                  name="name"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email</label>
+                <input
+                  type="email"
+                  id="f-email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-service">Service souhaité</label>
+              <select id="f-service" name="service">
+                <option value="">Choisir un service…</option>
+                <option value="landing">Landing Page</option>
+                <option value="vitrine">Site Vitrine</option>
+                <option value="autre">Autre / Je ne sais pas encore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-message">Message</label>
+              <textarea
+                id="f-message"
+                name="message"
+                rows="5"
+                placeholder="Décrivez brièvement votre projet…"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-full"
+              id="submit-btn"
+            >
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="nav-logo">◆ Studio</span>
+        <p class="footer-copy">© 2025 — Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
