@@ -72,6 +72,35 @@ const revealObserver = new IntersectionObserver(
 )
 revealEls.forEach(el => revealObserver.observe(el))
 
+/* ── Mobile Menu ── */
+const burger = document.getElementById('nav-burger')
+const mobileMenu = document.getElementById('mobile-menu')
+
+function closeMenu() {
+  burger.classList.remove('open')
+  burger.setAttribute('aria-expanded', 'false')
+  mobileMenu.classList.remove('open')
+  mobileMenu.setAttribute('aria-hidden', 'true')
+  document.body.style.overflow = ''
+}
+
+burger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.contains('open')
+  if (isOpen) {
+    closeMenu()
+  } else {
+    burger.classList.add('open')
+    burger.setAttribute('aria-expanded', 'true')
+    mobileMenu.classList.add('open')
+    mobileMenu.setAttribute('aria-hidden', 'false')
+    document.body.style.overflow = 'hidden'
+  }
+})
+
+mobileMenu.querySelectorAll('.menu-link').forEach(link => {
+  link.addEventListener('click', closeMenu)
+})
+
 /* ── Contact form ── */
 const form = document.getElementById('contact-form')
 if (form) {
