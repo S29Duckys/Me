@@ -75,13 +75,14 @@ revealEls.forEach(el => revealObserver.observe(el))
 /* ── Mobile Menu ── */
 const burger = document.getElementById('nav-burger')
 const mobileMenu = document.getElementById('mobile-menu')
+const menuBackdrop = document.getElementById('menu-backdrop')
 
 function closeMenu() {
   burger.classList.remove('open')
   burger.setAttribute('aria-expanded', 'false')
   mobileMenu.classList.remove('open')
   mobileMenu.setAttribute('aria-hidden', 'true')
-  document.body.style.overflow = ''
+  menuBackdrop.classList.remove('open')
 }
 
 burger.addEventListener('click', () => {
@@ -93,9 +94,12 @@ burger.addEventListener('click', () => {
     burger.setAttribute('aria-expanded', 'true')
     mobileMenu.classList.add('open')
     mobileMenu.setAttribute('aria-hidden', 'false')
-    document.body.style.overflow = 'hidden'
+    menuBackdrop.classList.add('open')
   }
 })
+
+menuBackdrop.addEventListener('click', closeMenu)
+document.getElementById('menu-close').addEventListener('click', closeMenu)
 
 mobileMenu.querySelectorAll('.menu-link').forEach(link => {
   link.addEventListener('click', closeMenu)
