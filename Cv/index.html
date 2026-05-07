@@ -3,216 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV – Candidature Magasin</title>
+  <title>CV – Nael Baras-Raso</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar">
-    <div class="nav-inner">
-      <span class="nav-name" data-fr="Mon CV" data-en="My Resume">Nael Baras-Raso</span>
-      <button class="lang-btn" id="langToggle">
-        <span class="lang-icon">🌐</span>
-        <span id="langLabel">EN</span>
-      </button>
-    </div>
-  </nav>
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <a class="lang-link" href="en.html">🌐 EN</a>
+    <button class="print-btn" onclick="window.print()">Sauvegarder en PDF</button>
+  </div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-blur-circle circle-1"></div>
-    <div class="hero-blur-circle circle-2"></div>
-    <div class="avatar-wrapper">
-      <div class="avatar">
-        <span>NB</span>
+  <!-- PAGE A4 -->
+  <div class="cv-page">
+
+    <!-- HEADER -->
+    <header class="cv-header">
+      <div class="cv-header-left">
+        <div class="cv-avatar">NB</div>
+        <div>
+          <div class="cv-name">Nael Baras-Raso</div>
+          <div class="cv-subtitle">Candidat – Employé de Magasin</div>
+        </div>
       </div>
-    </div>
-    <h1 class="hero-name">Nael Baras-Raso</h1>
-    <p class="hero-title" data-fr="Candidat – Employé de Magasin" data-en="Applicant – Retail Store Employee">
-      Candidat – Employé de Magasin
-    </p>
-    <div class="hero-contacts">
-      <span class="contact-chip">📧 naelbarasraso@gmail.com</span>
-      <span class="contact-chip">📞 +33 7 62 18 76 01</span>
-      <span class="contact-chip">📍 Disponible au Danemark</span>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="cv-body">
-
-    <!-- PROFIL -->
-    <section class="cv-section fade-in" id="profil">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">👤</span>
-          <span data-fr="Profil" data-en="Profile">Profil</span>
-        </h2>
-        <p class="section-text" data-fr="Motivé, rigoureux et doté d'un excellent sens du contact client, je suis à la recherche d'un poste en magasin au Danemark. Habitué au travail en équipe et à la gestion des stocks, je m'adapte rapidement à de nouveaux environnements et je suis ouvert à l'apprentissage de nouvelles méthodes de travail."
-           data-en="Motivated, rigorous and with an excellent sense of customer service, I am looking for a position in a store in Denmark. Used to teamwork and stock management, I adapt quickly to new environments and am open to learning new working methods.">
-          Motivé, rigoureux et doté d'un excellent sens du contact client, je suis à la recherche d'un poste en magasin au Danemark. Habitué au travail en équipe et à la gestion des stocks, je m'adapte rapidement à de nouveaux environnements et je suis ouvert à l'apprentissage de nouvelles méthodes de travail.
-        </p>
+      <div class="cv-contacts">
+        <span class="cv-contact">📧 naelbarasraso@gmail.com</span>
+        <span class="cv-contact">📞 +33 7 62 18 76 01</span>
+        <span class="cv-contact">📍 Disponible au Danemark</span>
       </div>
-    </section>
+    </header>
 
-    <!-- EXPÉRIENCES -->
-    <section class="cv-section fade-in" id="experience">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">💼</span>
-          <span data-fr="Expériences Professionnelles" data-en="Work Experience">Expériences Professionnelles</span>
-        </h2>
+    <!-- BODY -->
+    <div class="cv-body">
 
-        <div class="timeline">
+      <!-- SIDEBAR -->
+      <aside class="cv-sidebar">
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 data-fr="Btp (stage)" data-en="BTP (Internship)">Btp (stage)</h3>
-                <span class="timeline-date">2022 – 2024</span>
+        <section>
+          <div class="s-title">Profil</div>
+          <p class="s-text">Je recherche un poste en magasin au Danemark. Habitué au travail en équipe et à la gestion des stocks, je m'adapte rapidement et reste ouvert à de nouvelles méthodes de travail.</p>
+        </section>
+
+        <section>
+          <div class="s-title">Compétences</div>
+          <div class="skill-row">
+            <span class="skill-name">Service Client</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:92%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Gestion des Stocks</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:85%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Caisse / Encaissement</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Travail en Équipe</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:95%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Merchandising</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:78%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Logistique</span>
+            <div class="skill-bar"><div class="skill-fill" style="--pct:80%"></div></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="s-title">Langues</div>
+          <div class="lang-row">
+            <div class="lang-left"><span class="lang-flag">🇫🇷</span> Français</div>
+            <span class="lang-badge">Maternelle</span>
+          </div>
+          <div class="lang-row">
+            <div class="lang-left"><span class="lang-flag">🇬🇧</span> Anglais</div>
+            <span class="lang-badge">Niveau A2</span>
+          </div>
+        </section>
+
+        <section>
+          <div class="s-title">Level Langue</div>
+          <p class="s-text">Niveau débutant, compréhension basique et difficultés à l’oral.</p>
+        </section>
+
+        <section>
+          <div class="s-title">Qualités</div>
+          <div class="tags-wrap">
+            <span class="tag">Ponctuel</span>
+            <span class="tag">Dynamique</span>
+            <span class="tag">Organisé</span>
+            <span class="tag">Souriant</span>
+            <span class="tag">Autonome</span>
+            <span class="tag">Curieux</span>
+            <span class="tag">Rigoureux</span>
+            <span class="tag">Adaptable</span>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- MAIN -->
+      <main class="cv-main">
+
+        <section>
+          <div class="m-title">Expériences Professionnelles</div>
+
+          <div class="tl-item">
+            <div class="tl-spine">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-info">
+              <div class="tl-top">
+                <span class="tl-role">BTP (Stage)</span>
+                <span class="tl-date">2022 – 2024</span>
               </div>
-              <p class="timeline-company">Btp – Haute Savoie, France</p>
-              <ul class="timeline-list">
-                <li data-fr="Pose de plaquo et d'isolants" data-en="Plasterboard and insulation installation">Pose de plaquo et d'isolants</li>
-                <li data-fr="Pose d'enduit et de revêtements" data-en="Plastering and surface coating installation">Pose d'enduit et de revêtements</li>
+              <div class="tl-company">Haute Savoie, France</div>
+              <ul class="tl-list">
+                <li>Pose de plaquo et d'isolants</li>
+                <li>Pose d'enduit et de revêtements</li>
               </ul>
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 data-fr="Sport 2000 (Stage)" data-en="Sport 2000 (Internship)">Sport 2000 (Stage)</h3>
-                <span class="timeline-date">2021 – 2022</span>
+          <div class="tl-item">
+            <div class="tl-spine">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-info">
+              <div class="tl-top">
+                <span class="tl-role">Sport 2000 (Stage)</span>
+                <span class="tl-date">2021 – 2022</span>
               </div>
-              <p class="timeline-company">Sport 2000 – Haute Savoie, France</p>
-              <ul class="timeline-list">
-                <li data-fr="Réception et contrôle des marchandises" data-en="Receipt and inspection of goods">Réception et contrôle des marchandises</li>
-                <li data-fr="Organisation de l'espace de vente" data-en="Organization of the sales floor">Organisation de l'espace de vente</li>
-                <li data-fr="Support à l'équipe en période de forte activité" data-en="Team support during peak periods">Support à l'équipe en période de forte activité</li>
+              <div class="tl-company">Haute Savoie, France</div>
+              <ul class="tl-list">
+                <li>Réception et contrôle des marchandises</li>
+                <li>Organisation de l'espace de vente</li>
+                <li>Support à l'équipe en période de forte activité</li>
               </ul>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
+        </section>
+        
 
-    <!-- FORMATION -->
-    <section class="cv-section fade-in" id="formation">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">🎓</span>
-          <span data-fr="Formation" data-en="Education">Formation</span>
-        </h2>
+        <section>
+          <div class="m-title">Formation</div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 data-fr="Developper web / web mobile" data-en="Web Developer">Developper web / web mobile</h3>
-                <span class="timeline-date">2024 – 2026</span>
+          <div class="tl-item">
+            <div class="tl-spine">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-info">
+              <div class="tl-top">
+                <span class="tl-role">Développeur Web / Web Mobile</span>
+                <span class="tl-date">2024 – 2026</span>
               </div>
-              <p class="timeline-company" data-fr="Eden School – Lyon" data-en="Eden School – Lyon">Eden School – Lyon</p>
+              <div class="tl-company">Eden School – Lyon</div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- COMPÉTENCES -->
-    <section class="cv-section fade-in" id="competences">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">⚡</span>
-          <span data-fr="Compétences" data-en="Skills">Compétences</span>
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Service Client" data-en="Customer Service">Service Client</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 92%"></div></div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Gestion des Stocks" data-en="Stock Management">Gestion des Stocks</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Caisse / Encaissement" data-en="Cash Register">Caisse / Encaissement</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Travail en Équipe" data-en="Teamwork">Travail en Équipe</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 95%"></div></div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Merchandising" data-en="Merchandising">Merchandising</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-label" data-fr="Logistique" data-en="Logistics">Logistique</span>
-            <div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- LANGUES -->
-    <section class="cv-section fade-in" id="langues">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">🌍</span>
-          <span data-fr="Langues" data-en="Languages">Langues</span>
-        </h2>
-        <div class="langs-grid">
-          <div class="lang-card">
-            <span class="lang-flag">🇫🇷</span>
-            <span class="lang-name" data-fr="Français" data-en="French">Français</span>
-            <span class="lang-level" data-fr="Langue maternelle" data-en="Native language">Langue maternelle</span>
-          </div>
-          <div class="lang-card">
-            <span class="lang-flag">🇬🇧</span>
-            <span class="lang-name" data-fr="Anglais" data-en="English">Anglais</span>
-            <span class="lang-level" data-fr="Niveau A2" data-en="Level A2">Niveau A2</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </main>
 
-    <!-- QUALITÉS -->
-    <section class="cv-section fade-in" id="qualites">
-      <div class="section-card">
-        <h2 class="section-title">
-          <span class="section-icon">✨</span>
-          <span data-fr="Qualités" data-en="Qualities">Qualités</span>
-        </h2>
-        <div class="tags-grid">
-          <span class="tag" data-fr="Ponctuel" data-en="Punctual">Ponctuel</span>
-          <span class="tag" data-fr="Dynamique" data-en="Dynamic">Dynamique</span>
-          <span class="tag" data-fr="Organisé" data-en="Organized">Organisé</span>
-          <span class="tag" data-fr="Souriant" data-en="Friendly">Souriant</span>
-          <span class="tag" data-fr="Autonome" data-en="Autonomous">Autonome</span>
-          <span class="tag" data-fr="Curieux" data-en="Curious">Curieux</span>
-          <span class="tag" data-fr="Rigoureux" data-en="Rigorous">Rigoureux</span>
-          <span class="tag" data-fr="Adaptable" data-en="Adaptable">Adaptable</span>
-        </div>
-      </div>
-    </section>
+    </div>
 
-  </main>
+    <!-- FOOTER -->
+    <footer class="cv-footer">
+      Disponible immédiatement &middot; Permis B &middot; Prêt à me déplacer au Danemark
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="cv-footer">
-    <p data-fr="Disponible immédiatement · Permis B · Prêt à me déplacer au Danemark"
-       data-en="Immediately available · Driver's license · Ready to relocate to Denmark">
-      Disponible immédiatement · Permis B · Prêt à me déplacer au Danemark
-    </p>
-  </footer>
+  </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
